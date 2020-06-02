@@ -16,7 +16,7 @@ const getInfo = async (direccion) => {
     try {
         let zoneData = await lugar.getLugarLatLng(direccion);   
         let temp = await clima.getClima(zoneData.lat, zoneData.lng);
-        return `El cilma de ${ direccion } es de ${ temp } °C.`;
+        return `El clima de ${ direccion } es de ${ temp } °C.`;
     } catch (error) {
         return `No se pudo determinar el clima de ${ direccion }.`
     }
